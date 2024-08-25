@@ -4,14 +4,12 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.*;
 
 import static tests.TestData.productName;
 
 @DisplayName("Мобильные тесты на избранное в Ригле")
-@Tag("MOBILE")
 public class FavouritesTests extends TestBase {
 
     FirstWelcomePage firstWelcomePage = new FirstWelcomePage();

@@ -4,7 +4,6 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.CatalogPage;
 import pages.FirstWelcomePage;
@@ -15,7 +14,6 @@ import static tests.TestData.productName;
 import static tests.TestData.searchText;
 
 @DisplayName("Мобильные тесты на поиск товаров в Ригле")
-@Tag("MOBILE")
 public class SearchProductTests extends TestBase {
 
     FirstWelcomePage firstWelcomePage = new FirstWelcomePage();
@@ -24,7 +22,6 @@ public class SearchProductTests extends TestBase {
     ProductPage productPage = new ProductPage();
 
     @Test
-    @Tag("search")
     @Owner("Дарья Петрова")
     @Feature("Реализация главного раздела")
     @Story("MOBILE: Поиск товара")
