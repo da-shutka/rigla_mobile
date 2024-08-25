@@ -7,7 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.*;
 
-@DisplayName("Мобильные тесты на приветственную страницу")
+@DisplayName("Мобильные тесты на приветственную страницу в приложении Ригла")
 public class WelcomePageTests extends TestBase {
 
     FirstWelcomePage firstWelcomePage = new FirstWelcomePage();

@@ -13,7 +13,7 @@ import pages.ProductPage;
 import static tests.TestData.productName;
 import static tests.TestData.searchText;
 
-@DisplayName("Мобильные тесты на поиск товаров в Ригле")
+@DisplayName("Мобильные тесты на поиск товаров в приложении Ригла")
 public class SearchProductTests extends TestBase {
 
     FirstWelcomePage firstWelcomePage = new FirstWelcomePage();

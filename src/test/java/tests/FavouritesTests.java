@@ -9,7 +9,7 @@ import pages.*;
 
 import static tests.TestData.productName;
 
-@DisplayName("Мобильные тесты на избранное в Ригле")
+@DisplayName("Мобильные тесты на избранное в приложении Ригла")
 public class FavouritesTests extends TestBase {
 
     FirstWelcomePage firstWelcomePage = new FirstWelcomePage();
