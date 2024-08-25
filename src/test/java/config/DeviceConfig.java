@@ -14,12 +14,6 @@ public interface DeviceConfig extends Config {
 
     String version();
 
-    String project();
-
-    String build();
-
-    String name();
-
     String url();
 
     String language();

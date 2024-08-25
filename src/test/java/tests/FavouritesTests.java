@@ -24,14 +24,30 @@ public class FavouritesTests extends TestBase {
     @Owner("Дарья Петрова")
     @Feature("Реализация списка избранных товаров пользователя")
     @Story("MOBILE: Добавление товара в список избранного")
-    @DisplayName("Проверка добавления товара в избранное")
-    void checkSuccessfulProductAdditionToFavourites() {
+    @DisplayName("Проверка добавления товара в избранное со страницы продукта")
+    void checkProductAdditionToFavouritesFromProductPage() {
         firstWelcomePage.closeWelcome();
         mainPage
                 .confirmCity()
                 .searchByText(productName);
         catalogPage.clickToProductCard(productName);
         productPage.addToFavourites();
+        favouritesPage
+                .openPage()
+                .checkAddedProductExistence(productName);
+    }
+
+    @Test
+    @Owner("Дарья Петрова")
+    @Feature("Реализация списка избранных товаров пользователя")
+    @Story("MOBILE: Добавление товара в список избранного")
+    @DisplayName("Проверка добавления товара в избранное из каталога")
+    void checkProductAdditionToFavouritesFromCatalog() {
+        firstWelcomePage.closeWelcome();
+        mainPage
+                .confirmCity()
+                .searchByText(productName);
+        catalogPage.addToFavourites(productName);
         favouritesPage
                 .openPage()
                 .checkAddedProductExistence(productName);

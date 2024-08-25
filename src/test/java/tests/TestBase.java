@@ -19,7 +19,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         if (System.getProperty("deviceHost") == null) {
-            System.setProperty("deviceHost", "emulation");
+            System.setProperty("deviceHost", "browserstack");
         }
 
         switch (System.getProperty("deviceHost")) {
@@ -47,7 +47,7 @@ public class TestBase {
     @AfterEach
     void addAttachments() {
         String sessionId = Selenide.sessionId().toString();
-        //Attach.pageSource();
+        Attach.pageSource();
         closeWebDriver();
         if (System.getProperty("deviceHost").equals("browserstack")) {
             Attach.addVideo(sessionId);

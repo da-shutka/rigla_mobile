@@ -1,5 +1,7 @@
 package pages;
 
+import com.codeborne.selenide.Selenide;
+
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.*;
@@ -15,10 +17,14 @@ public class CatalogPage {
 
     public void clickToProductCard(String text) {
         $x("//android.view.View[contains(@content-desc, '" + text + "')]").click();
-
     }
 
     public void addToCart() {
         $(accessibilityId("В корзину")).click();
+        Selenide.sleep(3000);
+    }
+
+    public void addToFavourites(String text) {
+        $x("//android.view.View[contains(@content-desc, '" + text + "')]/android.view.View[3]").click();
     }
 }

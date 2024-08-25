@@ -10,14 +10,22 @@ public class ProductPage {
         $(accessibilityId(name)).should(exist);
     }
 
-    public ProductPage addToFavourites() {
+    public void addToFavourites() {
         $x("//android.widget.ScrollView/android.widget.ImageView[4]").click();
-        return this;
     }
 
     public void returnToMainPage() {
         back();
         back();
         back();
+    }
+
+    public ProductPage addToCart() {
+        $x("//android.view.View[contains(@content-desc, 'В корзину')]").should(exist).click();
+        return this;
+    }
+
+    public void goToCart() {
+        $(accessibilityId("Перейти\nВ корзину")).should(exist).click();
     }
 }

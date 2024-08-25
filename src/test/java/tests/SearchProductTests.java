@@ -24,6 +24,7 @@ public class SearchProductTests extends TestBase {
     ProductPage productPage = new ProductPage();
 
     @Test
+    @Tag("search")
     @Owner("Дарья Петрова")
     @Feature("Реализация главного раздела")
     @Story("MOBILE: Поиск товара")

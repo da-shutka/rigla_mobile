@@ -20,6 +20,14 @@ public class AppiumDriver implements WebDriverProvider {
 
     private static final DeviceConfig config = ConfigFactory.create(DeviceConfig.class);
 
+    public static URL getAppiumServerUrl() {
+        try {
+            return new URL(config.url());
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
@@ -27,7 +35,7 @@ public class AppiumDriver implements WebDriverProvider {
 
         options.setAutomationName(ANDROID_UIAUTOMATOR2)
                 .setPlatformName(ANDROID)
-                .setPlatformName(config.version())
+                .setPlatformVersion(config.version())
                 .setDeviceName(config.device())
                 .setApp(getAppPath())
                 .setAppPackage("ru.rigla.client.android")
@@ -35,15 +43,8 @@ public class AppiumDriver implements WebDriverProvider {
                 .setLanguage(config.language())
                 .setLocale(config.locale())
                 .setAutoGrantPermissions(true);
-        return new AndroidDriver(getAppiumServerUrl(), options);
-    }
-
-    public static URL getAppiumServerUrl() {
-        try {
-            return new URL(config.url());
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
+        DriverData.androidDriver = new AndroidDriver(getAppiumServerUrl(), options);
+        return DriverData.androidDriver;
     }
 
     private String getAppPath() {
