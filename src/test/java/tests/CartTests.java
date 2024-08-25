@@ -21,6 +21,7 @@ public class CartTests extends TestBase {
     CartPage cartPage = new CartPage();
 
     @Test
+    @Tag("cart")
     @Owner("Дарья Петрова")
     @Feature("Реализация корзины пользователя с товарами")
     @Story("MOBILE: Добавление товара в корзину")
@@ -37,6 +38,7 @@ public class CartTests extends TestBase {
     }
 
     @Test
+    @Tag("cart")
     @Owner("Дарья Петрова")
     @Feature("Реализация корзины пользователя с товарами")
     @Story("MOBILE: Добавление товара в корзину")

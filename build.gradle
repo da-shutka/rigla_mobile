@@ -62,3 +62,9 @@ task search(type: Test) {
         includeTags("search")
     }
 }
+
+task cart(type: Test) {
+    useJUnitPlatform {
+        includeTags("cart")
+    }
+}

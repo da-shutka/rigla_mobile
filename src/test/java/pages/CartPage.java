@@ -13,6 +13,6 @@ public class CartPage {
 
     public void checkAddedProductExistence(String text) {
         $x("//android.view.View[contains(@content-desc, '" + text + "')]").should(exist);
-        $x("//android.view.View[contains(@content-desc, 'к оформлению')]").should(exist);
+        $x("//android.view.View[contains(@content-desc, 'оформлению')]").should(exist);
     }
 }
