@@ -17,7 +17,7 @@ public class CatalogPage {
                 .shouldHave(sizeGreaterThan(0));
     }
 
-    @Step("Нажать на карточку товара с названием {text} в списке товаров")
+    @Step("Нажать на карточку товара с названием '{text}' в списке товаров")
     public void clickToProductCard(String text) {
         $x("//android.view.View[contains(@content-desc, '" + text + "')]").click();
     }

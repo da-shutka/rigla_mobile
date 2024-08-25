@@ -17,12 +17,12 @@ public class MainPage {
         return this;
     }
 
-    @Step("Проверить, что открылся главный раздел и есть поле поиска товаров")
+    @Step("Проверить, что открылся раздел 'Главная' и есть поле поиска товаров")
     public void checkSearchInputExistence() {
         $x("//android.view.View[@content-desc='Поиск']").should(exist);
     }
 
-    @Step("Ввести {text} в поисковой строке на главной странице и нажать кнопку поиска на клавиатуре")
+    @Step("Ввести '{text}' в поисковой строке на главной странице и нажать кнопку поиска на мобильной клавиатуре")
     public void
     searchByText(String text) {
         $x("//android.view.View[@content-desc='Поиск']").click();
@@ -30,6 +30,4 @@ public class MainPage {
         $x("//android.widget.EditText").sendKeys(text);
         androidDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
     }
-
-
 }

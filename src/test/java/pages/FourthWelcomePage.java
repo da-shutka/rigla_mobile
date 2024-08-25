@@ -8,13 +8,13 @@ import static io.appium.java_client.AppiumBy.accessibilityId;
 
 public class FourthWelcomePage {
 
-    @Step("Проверить, что на четвертой приветственной странице есть кнопка Далее")
+    @Step("Проверить, что на четвертой приветственной странице есть кнопка 'Далее'")
     public FourthWelcomePage checkNextButtonExistence() {
         $(accessibilityId("Далее")).should(exist);
         return this;
     }
 
-    @Step("Нажать кнопку Далее на четвертой приветственной странице")
+    @Step("Нажать кнопку 'Далее' на четвертой приветственной странице")
     public void clickNext() {
         $(accessibilityId("Далее")).click();
     }

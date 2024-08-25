@@ -8,7 +8,7 @@ import static io.appium.java_client.AppiumBy.accessibilityId;
 
 public class ProductPage {
 
-    @Step("Проверить, что страница товара с заголовком {name} открылась")
+    @Step("Проверить, что страница товара с заголовком '{name}' открылась")
     public void checkProductName(String name) {
         $(accessibilityId(name)).should(exist);
     }

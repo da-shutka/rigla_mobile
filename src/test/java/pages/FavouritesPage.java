@@ -15,7 +15,7 @@ public class FavouritesPage {
         return this;
     }
 
-    @Step("Проверить, что товар с названием {text} добавлен в избранное")
+    @Step("Проверить, что товар с названием '{text}' добавлен в избранное")
     public void checkAddedProductExistence(String text) {
         $x("//android.view.View[contains(@content-desc, '" + text + "')]").should(Condition.exist);
     }
