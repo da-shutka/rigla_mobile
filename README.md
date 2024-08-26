@@ -26,8 +26,8 @@
 <a href="https://developer.android.com/studio"><img width="6%" title="Android Studio" src="media/icons/Android_Studio.svg"/></a>
 <a href="https://www.java.com/"><img width="6%" title="Java" src="media/icons/Java.svg"/></a>
 <a href="https://selenide.org/"><img width="6%" title="Selenide" src="media/icons/Selenide.svg"/></a>
-<a href="https://www.browserstack.com/"><img width="6%" title="BrowserStack" src="media/icons/BrowserStack.png"/></a>
-<a href="https://appium.io/docs/en/latest/"><img width="6%" title="Appium" src="media/icons/Appium.png"/></a>
+<a href="https://www.browserstack.com/"><img width="6%" title="BrowserStack" src="media/icons/BrowserStack.svg"/></a>
+<a href="https://appium.io/docs/en/latest/"><img width="6%" title="Appium" src="media/icons/Appium.svg"/></a>
 <a href="https://github.com/allure-framework/allure2"><img width="6%" title="Allure Report" src="media/icons/Allure_Report.svg"/></a>
 <a href="https://qameta.io/"><img width="6%" title="Allure TestOps" src="media/icons/Allure_TestOps.svg"/></a>
 <a href="https://gradle.org/"><img width="6%" title="Gradle" src="media/icons/Gradle.svg"/></a>
@@ -91,7 +91,7 @@
     - ```emulation```
     - ```real```
 
-### <img width="3%" title="BrowserStack" src="media/icons/BrowserStack.png"/> BrowserStack
+### <img width="3%" title="BrowserStack" src="media/icons/BrowserStack.svg"/> BrowserStack
 Для запуска тестов в BrowserStack локально необходимо ввести в терминале команду
 ```bash
 gradle clean test
@@ -176,6 +176,6 @@ clean test -DdeviceHost=browserstack
 После завершения сборки специальный бот, созданный в ```Telegram```, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.  
 <img width="30%" title="TG Notification" src="media/img/TG.png"/>
 
-## <img width="3%" title="BrowserStack" src="media/icons/BrowserStack.png"/> Видео примера запуска тестов в BrowserStack
+## <img width="3%" title="BrowserStack" src="media/icons/BrowserStack.svg"/> Видео примера запуска тестов в BrowserStack
 Как упоминалось ранее, для каждого мобильного теста, запускаемого в BrowserStack, записывается видео его выполнения.  
 <img width="50%" title="Test Video" src="media/img/TestVideo.gif"/>
