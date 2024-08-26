@@ -155,10 +155,10 @@ clean test -DdeviceHost=browserstack
 ## <img width="3%" title="Allure TestOps" src="media/icons/Allure_TestOps.svg"/> [Интеграция с Allure TestOps](https://allure.autotests.cloud/project/4404/dashboards)
 ### Результаты запуска из Jenkins
 Во время выполнения сборки в Jenkins данные о запуске, тестах и результатах появляются в Allure TestOps.  
-В блоке ```История сборок/Build History``` напротив конкретной сборки отображается значок <img width="2%" title="Allure TestOps" src="media/icons/Allure_TestOps.svg"/>, при нажатии на который открывается страница связанного запуска (вкладка "Обзор").  
+В блоке ```История сборок/Build History``` напротив конкретной сборки отображается значок <img width="2%" title="Allure TestOps" src="media/icons/Allure_TestOps.svg"/>, при нажатии на который открывается страница связанного [запуска](https://allure.autotests.cloud/launch/41389) (вкладка "Обзор").  
 <img width="50%" title="Allure TestOps Launch Overview" src="media/img/Allure_TestOps_launch_overview.png"/>  
 
-На вкладке "Результаты тестов" можно просмотреть результат выполнения каждого теста:  
+На вкладке "Результаты тестов" можно просмотреть [результат](https://allure.autotests.cloud/launch/41389/tree?treeId=8630) выполнения каждого теста:  
 <img width="50%" title="Allure TestOps Launch Test Results" src="media/img/Allure_TestOps_launch_testResult.png"/>
 
 ### Запуск из TestOps
