@@ -22,22 +22,6 @@ public class CartTests extends TestBase {
     @Owner("Дарья Петрова")
     @Feature("Реализация корзины пользователя с товарами")
     @Story("MOBILE: Добавление товара в корзину")
-    @DisplayName("Проверка добавления товара в корзину из каталога")
-    void checkProductAdditionToCartFromCatalog() {
-        firstWelcomePage.closeWelcome();
-        mainPage
-                .confirmCity()
-                .searchByText(productName);
-        catalogPage.addToCart();
-        cartPage
-                .openPage()
-                .checkAddedProductExistence(productName);
-    }
-
-    @Test
-    @Owner("Дарья Петрова")
-    @Feature("Реализация корзины пользователя с товарами")
-    @Story("MOBILE: Добавление товара в корзину")
     @DisplayName("Проверка добавления товара в корзину со страницы продукта")
     void checkProductAdditionToCartFromProductCard() {
         firstWelcomePage.closeWelcome();
@@ -49,5 +33,21 @@ public class CartTests extends TestBase {
                 .addToCart()
                 .goToCart();
         cartPage.checkAddedProductExistence(productName);
+    }
+
+    @Test
+    @Owner("Дарья Петрова")
+    @Feature("Реализация корзины пользователя с товарами")
+    @Story("MOBILE: Добавление товара в корзину")
+    @DisplayName("Проверка добавления товара в корзину из каталога")
+    void checkProductAdditionToCartFromCatalog() {
+        firstWelcomePage.closeWelcome();
+        mainPage
+                .confirmCity()
+                .searchByText(productName);
+        catalogPage.addToCart();
+        cartPage
+                .openPage()
+                .checkAddedProductExistence(productName);
     }
 }
