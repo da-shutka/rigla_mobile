@@ -45,7 +45,7 @@
 - Используются фреймворки ```JUnit 5``` и ```Selenide```
 - Используется шаблон проектирования ```PageObject```
 - Используется технология ```Owner``` для конфигурации тестов
-- Реализованы драйвера для запуска тестов в ```BrowserStack```, в эмулятор и на реальном устройстве
+- Реализованы драйвера для запуска тестов в ```BrowserStack```, в эмуляторе и на реальном устройстве
 - Реализована возможность запуска тестов в ```Jenkins```
 - Реализована возможность запуска тестов из ```Allure TestOps```
 - Настроена отправка уведомлений о результатах прохождения в чат-бот ```Telegram```
@@ -91,7 +91,7 @@
     - ```emulation```
     - ```real```
 
-### <img width="3%" title="BrowserStack" src="media/icons/BrowserStack.svg"/> BrowserStack
+### <img width="3%" title="BrowserStack" src="media/icons/browserstack.svg"/> BrowserStack
 Для запуска тестов в BrowserStack локально необходимо ввести в терминале команду
 ```bash
 gradle clean test
@@ -129,7 +129,7 @@ clean test -DdeviceHost=browserstack
 ```
 
 :gear: Запуск в Jenkins:
-1. Открыть [сборку](https://jenkins.autotests.cloud/job/C27-petrova_di-rigla/)
+1. Открыть [сборку](https://jenkins.autotests.cloud/job/C27-petrova_di-rigla-mobile/)
 2. Нажать ```Собрать сейчас```/```Build now```
 3. Результат - в логах самой сборки, в Allure-отчете или в Allure TestOps
 
@@ -147,7 +147,7 @@ clean test -DdeviceHost=browserstack
 
 Помимо обычного логирования каждого шага теста, в конце каждого мобильного теста фиксируется следующая информация:  
 <img width="50%" title="Allure Detailed Finish" src="media/img/Allure_detailedFinish.png"/>
-- исходных код страницы
+- исходный код страницы
 - видео прохождения теста (только для BrowserStack)
 
 ---
@@ -176,6 +176,6 @@ clean test -DdeviceHost=browserstack
 После завершения сборки специальный бот, созданный в ```Telegram```, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.  
 <img width="30%" title="TG Notification" src="media/img/TG.png"/>
 
-## <img width="3%" title="BrowserStack" src="media/icons/BrowserStack.svg"/> Видео примера запуска тестов в BrowserStack
+## <img width="3%" title="BrowserStack" src="media/icons/browserstack.svg"/> Видео примера запуска тестов в BrowserStack
 Как упоминалось ранее, для каждого мобильного теста, запускаемого в BrowserStack, записывается видео его выполнения.  
 <img width="50%" title="Test Video" src="media/img/TestVideo.gif"/>
