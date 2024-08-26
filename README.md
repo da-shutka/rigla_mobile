@@ -26,7 +26,7 @@
 <a href="https://developer.android.com/studio"><img width="6%" title="Android Studio" src="media/icons/Android_Studio.svg"/></a>
 <a href="https://www.java.com/"><img width="6%" title="Java" src="media/icons/Java.svg"/></a>
 <a href="https://selenide.org/"><img width="6%" title="Selenide" src="media/icons/Selenide.svg"/></a>
-<a href="https://www.browserstack.com/"><img width="6%" title="BrowserStack" src="media/icons/BrowserStack.svg"/></a>
+<a href="https://www.browserstack.com/"><img width="6%" title="BrowserStack" src="media/icons/browserstack.svg"/></a>
 <a href="https://appium.io/docs/en/latest/"><img width="6%" title="Appium" src="media/icons/Appium.svg"/></a>
 <a href="https://github.com/allure-framework/allure2"><img width="6%" title="Allure Report" src="media/icons/Allure_Report.svg"/></a>
 <a href="https://qameta.io/"><img width="6%" title="Allure TestOps" src="media/icons/Allure_TestOps.svg"/></a>
