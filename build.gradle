@@ -56,15 +56,3 @@ tasks.withType(Test) {
         }
     }
 }
-
-task search(type: Test) {
-    useJUnitPlatform {
-        includeTags("search")
-    }
-}
-
-task cart(type: Test) {
-    useJUnitPlatform {
-        includeTags("cart")
-    }
-}
