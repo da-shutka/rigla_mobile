@@ -23,7 +23,7 @@ public class CartTests extends TestBase {
     @Feature("Реализация корзины пользователя с товарами")
     @Story("MOBILE: Добавление товара в корзину")
     @DisplayName("Проверка добавления товара в корзину со страницы продукта")
-    void checkProductAdditionToCartFromProductCard() {
+    void checkProductAddingToCartFromProductCardTest() {
         firstWelcomePage.closeWelcome();
         mainPage
                 .confirmCity()
@@ -40,7 +40,7 @@ public class CartTests extends TestBase {
     @Feature("Реализация корзины пользователя с товарами")
     @Story("MOBILE: Добавление товара в корзину")
     @DisplayName("Проверка добавления товара в корзину из каталога")
-    void checkProductAdditionToCartFromCatalog() {
+    void checkProductAddingToCartFromCatalogTest() {
         firstWelcomePage.closeWelcome();
         mainPage
                 .confirmCity()

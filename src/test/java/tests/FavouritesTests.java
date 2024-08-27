@@ -23,7 +23,7 @@ public class FavouritesTests extends TestBase {
     @Feature("Реализация списка избранных товаров пользователя")
     @Story("MOBILE: Добавление товара в список избранного")
     @DisplayName("Проверка добавления товара в избранное со страницы продукта")
-    void checkProductAdditionToFavouritesFromProductPage() {
+    void checkProductAddingToFavouritesFromProductPageTest() {
         firstWelcomePage.closeWelcome();
         mainPage
                 .confirmCity()
@@ -40,7 +40,7 @@ public class FavouritesTests extends TestBase {
     @Feature("Реализация списка избранных товаров пользователя")
     @Story("MOBILE: Добавление товара в список избранного")
     @DisplayName("Проверка добавления товара в избранное из каталога")
-    void checkProductAdditionToFavouritesFromCatalog() {
+    void checkProductAddingToFavouritesFromCatalogTest() {
         firstWelcomePage.closeWelcome();
         mainPage
                 .confirmCity()

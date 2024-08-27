@@ -5,7 +5,8 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.exist;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 import static drivers.DriverData.androidDriver;
 import static io.appium.java_client.AppiumBy.accessibilityId;
 
