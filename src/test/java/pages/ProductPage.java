@@ -6,12 +6,14 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 import static io.appium.java_client.AppiumBy.accessibilityId;
+import static io.appium.java_client.AppiumBy.androidUIAutomator;
 
 public class ProductPage {
 
     @Step("Проверить, что страница товара с заголовком '{name}' открылась")
     public void checkProductName(String name) {
-        $(accessibilityId(name)).should(exist);
+        $(androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(" +
+                "new UiSelector().descriptionContains(\"" + name + "\"))")).should(exist);
     }
 
     @Step("Нажать на сердечко (добавить в избранное) на странице товара")
