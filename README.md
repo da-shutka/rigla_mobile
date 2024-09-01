@@ -2,7 +2,6 @@
 >«Ригла» - сеть аптек. Большинство лекарств поставляется в аптеки сети «Ригла» крупнейшим в России фармацевтическим дистрибьютором «Протек», который закупает их напрямую у официальных производителей. «Ригла» располагает широким ассортиментом лекарственных средств, также здесь же можно найти и редкие рецептурные препараты и многое другое.
 
 ## :receipt: Содержание
-- [Используемый стек](#computer-используемый-стек)
 - [Описание проекта](#bookmark_tabs-описание-проекта)
 - [Реализованные проверки](#heavy_check_mark-реализованные-проверки)
 - [Приложение Ригла](#-приложение-ригла)
@@ -20,7 +19,8 @@
 - [Видео примера запуска тестов в BrowserStack](#-видео-примера-запуска-тестов-в-browserstack)
 
 
-## :computer: Используемый стек
+## :bookmark_tabs: Описание проекта
+
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img width="6%" title="IntelliJ IDEA" src="media/icons/Intelij_IDEA.svg"/></a>
 <a href="https://developer.android.com/studio"><img width="6%" title="Android Studio" src="media/icons/Android_Studio.svg"/></a>
@@ -36,8 +36,6 @@
 <a href="https://www.jenkins.io/"><img width="6%" title="Jenkins" src="media/icons/Jenkins.svg"/></a>
 <a href="https://telegram.org/"><img width="6%" title="Telegram" src="media/icons/Telegram.svg"/></a>
 </p>
-
-## :bookmark_tabs: Описание проекта
 
 - Проект состоит из мобильных тестов
 - Автоматические тесты реализованы на языке ```Java```
@@ -122,7 +120,7 @@ gradle clean test -DdeviceHost=real
 :warning: Внимание! При одновременном запуске эмулятора и подключенного реального устройства, тесты запускаются на реальном устройстве и при указании ```-DdeviceHost=emulation```
 
 ## <img width="3%" title="Jenkins" src="media/icons/Jenkins.svg"/> [Сборка в Jenkins](https://jenkins.autotests.cloud/job/C27-petrova_di-rigla-mobile/)
-<img width="50%" title="Jenkins" src="media/img/Jenkins_job.png"/>
+<img width="100%" title="Jenkins" src="media/img/Jenkins_job.png"/>
 
 ```bash
 clean test -DdeviceHost=browserstack
@@ -140,13 +138,13 @@ clean test -DdeviceHost=browserstack
 В блоке ```История сборок/Build History``` напротив конкретной сборки отображается значок [<img width="2%" title="Allure Report" src="media/icons/Allure_Report.svg"/>](https://jenkins.autotests.cloud/job/C27-petrova_di-rigla-mobile/4/allure/), при нажатии на который открывается страница со сформированным html-отчетом и тестовой документацией.
 
 На основной странице представлена информация о пройденных тестах, тестовые наборы, статистика проходов, распределение по функционалу.  
-<img width="50%" title="Allure Overview" src="media/img/Allure_overview.png"/>
+<img width="100%" title="Allure Overview" src="media/img/Allure_overview.png"/>
 
 Переходя на страницу конкретного тестового набора, можно увидеть список всех пройденных и непройденных тестов, а также детали каждого теста.  
-<img width="50%" title="Allure Test" src="media/img/Allure_test.png"/>
+<img width="100%" title="Allure Test" src="media/img/Allure_test.png"/>
 
 Помимо обычного логирования каждого шага теста, в конце каждого мобильного теста фиксируется следующая информация:  
-<img width="50%" title="Allure Detailed Finish" src="media/img/Allure_detailedFinish.png"/>
+<img width="100%" title="Allure Detailed Finish" src="media/img/Allure_detailedFinish.png"/>
 - исходный код страницы
 - видео прохождения теста (только для BrowserStack)
 
@@ -156,14 +154,14 @@ clean test -DdeviceHost=browserstack
 ### Результаты запуска из Jenkins
 Во время выполнения сборки в Jenkins данные о запуске, тестах и результатах появляются в Allure TestOps.  
 В блоке ```История сборок/Build History``` напротив конкретной сборки отображается значок <img width="2%" title="Allure TestOps" src="media/icons/Allure_TestOps.svg"/>, при нажатии на который открывается страница связанного [запуска](https://allure.autotests.cloud/launch/41389) (вкладка "Обзор").  
-<img width="50%" title="Allure TestOps Launch Overview" src="media/img/Allure_TestOps_launch_overview.png"/>  
+<img width="100%" title="Allure TestOps Launch Overview" src="media/img/Allure_TestOps_launch_overview.png"/>  
 
 На вкладке "Результаты тестов" можно просмотреть [результат](https://allure.autotests.cloud/launch/41389/tree?treeId=8630) выполнения каждого теста:  
-<img width="50%" title="Allure TestOps Launch Test Results" src="media/img/Allure_TestOps_launch_testResult.png"/>
+<img width="100%" title="Allure TestOps Launch Test Results" src="media/img/Allure_TestOps_launch_testResult.png"/>
 
 ### Запуск из TestOps
 Запустить тесты можно и из Allure TestOps:   
-<img width="50%" title="Allure TestOps Job Params" src="media/img/Allure_TestOps_job_params.png"/>  
+<img width="100%" title="Allure TestOps Job Params" src="media/img/Allure_TestOps_job_params.png"/>  
 1. Перейти в [джобы проекта](https://allure.autotests.cloud/project/4404/jobs)
 2. Нажать кнопку "Запустить джобу"
 3. Задать название
@@ -174,8 +172,8 @@ clean test -DdeviceHost=browserstack
 
 ## <img width="3%" title="Telegram" src="media/icons/Telegram.svg"/> Уведомления в Telegram
 После завершения сборки специальный бот, созданный в ```Telegram```, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.  
-<img width="30%" title="TG Notification" src="media/img/TG.png"/>
+<img width="50%" title="TG Notification" src="media/img/TG.png"/>
 
 ## <img width="3%" title="BrowserStack" src="media/icons/browserstack.svg"/> Видео примера запуска тестов в BrowserStack
 Как упоминалось ранее, для каждого мобильного теста, запускаемого в BrowserStack, записывается видео его выполнения.  
-<img width="50%" title="Test Video" src="media/img/TestVideo.gif"/>
+<img width="80%" title="Test Video" src="media/img/TestVideo.gif"/>
