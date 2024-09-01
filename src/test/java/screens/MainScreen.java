@@ -1,4 +1,4 @@
-package pages;
+package screens;
 
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
@@ -10,10 +10,10 @@ import static com.codeborne.selenide.Selenide.$x;
 import static drivers.DriverData.androidDriver;
 import static io.appium.java_client.AppiumBy.accessibilityId;
 
-public class MainPage {
+public class MainScreen {
 
     @Step("Подтвердить выбор города, выбранного по умолчанию, в появившемся уведомлении")
-    public MainPage confirmCity() {
+    public MainScreen confirmCity() {
         $(accessibilityId("Да")).click();
         return this;
     }
@@ -24,8 +24,7 @@ public class MainPage {
     }
 
     @Step("Ввести '{text}' в поисковой строке на главной странице и нажать кнопку поиска на мобильной клавиатуре")
-    public void
-    searchByText(String text) {
+    public void searchByText(String text) {
         $x("//android.view.View[@content-desc='Поиск']").click();
         $x("//android.widget.EditText").click();
         $x("//android.widget.EditText").sendKeys(text);

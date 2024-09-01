@@ -5,16 +5,14 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pages.*;
+import screens.MainScreen;
+import screens.WelcomeScreen;
 
 @DisplayName("Мобильные тесты на приветственную страницу в приложении Ригла")
-public class WelcomePageTests extends TestBase {
+public class WelcomeScreenTests extends TestBaseMobile {
 
-    FirstWelcomePage firstWelcomePage = new FirstWelcomePage();
-    SecondWelcomePage secondWelcomePage = new SecondWelcomePage();
-    ThirdWelcomePage thirdWelcomePage = new ThirdWelcomePage();
-    FourthWelcomePage fourthWelcomePage = new FourthWelcomePage();
-    MainPage mainPage = new MainPage();
+    final WelcomeScreen welcomeScreen = new WelcomeScreen();
+    final MainScreen mainScreen = new MainScreen();
 
     @Test
     @Owner("Дарья Петрова")
@@ -22,19 +20,16 @@ public class WelcomePageTests extends TestBase {
     @Story("MOBILE: Приветственная страница")
     @DisplayName("Проверка работы приветственной страницы")
     void checkWelcomePagesTest() {
-        firstWelcomePage
+        welcomeScreen
+                .checkNextButtonExistence()
+                .clickNext()
+                .checkNextButtonExistence()
+                .clickNext()
+                .checkNextButtonExistence()
+                .clickNext()
                 .checkNextButtonExistence()
                 .clickNext();
-        secondWelcomePage
-                .checkNextButtonExistence()
-                .clickNext();
-        thirdWelcomePage
-                .checkNextButtonExistence()
-                .clickNext();
-        fourthWelcomePage
-                .checkNextButtonExistence()
-                .clickNext();
-        mainPage
+        mainScreen
                 .confirmCity()
                 .checkSearchInputExistence();
     }

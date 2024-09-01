@@ -5,21 +5,22 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pages.CatalogPage;
-import pages.FirstWelcomePage;
-import pages.MainPage;
-import pages.ProductPage;
+import screens.CatalogScreen;
+import screens.MainScreen;
+import screens.ProductScreen;
+import screens.WelcomeScreen;
 
-import static tests.TestData.productName;
-import static tests.TestData.searchText;
+import static data.TestData.getTestData;
 
 @DisplayName("Мобильные тесты на поиск товаров в приложении Ригла")
-public class SearchProductTests extends TestBase {
+public class SearchProductTests extends TestBaseMobile {
 
-    FirstWelcomePage firstWelcomePage = new FirstWelcomePage();
-    MainPage mainPage = new MainPage();
-    CatalogPage catalogPage = new CatalogPage();
-    ProductPage productPage = new ProductPage();
+    final WelcomeScreen welcomeScreen = new WelcomeScreen();
+    final MainScreen mainScreen = new MainScreen();
+    final CatalogScreen catalogScreen = new CatalogScreen();
+    final ProductScreen productScreen = new ProductScreen();
+    final String searchText = getTestData("search");
+    final String productName = getTestData("product");
 
     @Test
     @Owner("Дарья Петрова")
@@ -27,11 +28,11 @@ public class SearchProductTests extends TestBase {
     @Story("MOBILE: Поиск товара")
     @DisplayName("Проверка работы поиска товара по названию")
     void checkMainSearchInputTest() {
-        firstWelcomePage.closeWelcome();
-        mainPage
+        welcomeScreen.closeWelcome();
+        mainScreen
                 .confirmCity()
                 .searchByText(searchText);
-        catalogPage.checkProductsAreFound(searchText);
+        catalogScreen.checkProductsAreFound(searchText);
     }
 
     @Test
@@ -40,11 +41,11 @@ public class SearchProductTests extends TestBase {
     @Story("MOBILE: Поиск товара")
     @DisplayName("Проверка открытия страницы товара из списка")
     void checkProductPageIsOpenedFromSearchListTest() {
-        firstWelcomePage.closeWelcome();
-        mainPage
+        welcomeScreen.closeWelcome();
+        mainScreen
                 .confirmCity()
                 .searchByText(productName);
-        catalogPage.clickToProductCard(productName);
-        productPage.checkProductName(productName);
+        catalogScreen.clickToProductCard(productName);
+        productScreen.checkProductName(productName);
     }
 }

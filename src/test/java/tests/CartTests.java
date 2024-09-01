@@ -5,18 +5,19 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pages.*;
+import screens.*;
 
-import static tests.TestData.productName;
+import static data.TestData.getTestData;
 
 @DisplayName("Мобильные тесты на корзину в приложении Ригла")
-public class CartTests extends TestBase {
+public class CartTests extends TestBaseMobile {
 
-    FirstWelcomePage firstWelcomePage = new FirstWelcomePage();
-    MainPage mainPage = new MainPage();
-    CatalogPage catalogPage = new CatalogPage();
-    ProductPage productPage = new ProductPage();
-    CartPage cartPage = new CartPage();
+    final WelcomeScreen welcomeScreen = new WelcomeScreen();
+    final MainScreen mainScreen = new MainScreen();
+    final CatalogScreen catalogScreen = new CatalogScreen();
+    final ProductScreen productScreen = new ProductScreen();
+    final CartScreen cartScreen = new CartScreen();
+    final String productName = getTestData("product");
 
     @Test
     @Owner("Дарья Петрова")
@@ -24,15 +25,15 @@ public class CartTests extends TestBase {
     @Story("MOBILE: Добавление товара в корзину")
     @DisplayName("Проверка добавления товара в корзину со страницы продукта")
     void checkProductAddingToCartFromProductCardTest() {
-        firstWelcomePage.closeWelcome();
-        mainPage
+        welcomeScreen.closeWelcome();
+        mainScreen
                 .confirmCity()
                 .searchByText(productName);
-        catalogPage.clickToProductCard(productName);
-        productPage
+        catalogScreen.clickToProductCard(productName);
+        productScreen
                 .addToCart()
                 .goToCart();
-        cartPage.checkAddedProductExistence(productName);
+        cartScreen.checkAddedProductExistence(productName);
     }
 
     @Test
@@ -41,13 +42,13 @@ public class CartTests extends TestBase {
     @Story("MOBILE: Добавление товара в корзину")
     @DisplayName("Проверка добавления товара в корзину из каталога")
     void checkProductAddingToCartFromCatalogTest() {
-        firstWelcomePage.closeWelcome();
-        mainPage
+        welcomeScreen.closeWelcome();
+        mainScreen
                 .confirmCity()
                 .searchByText(productName);
-        catalogPage.addToCart();
-        cartPage
-                .openPage()
+        catalogScreen.addToCart();
+        cartScreen
+                .open()
                 .checkAddedProductExistence(productName);
     }
 }

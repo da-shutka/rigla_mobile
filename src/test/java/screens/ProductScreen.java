@@ -1,4 +1,4 @@
-package pages;
+package screens;
 
 import io.qameta.allure.Step;
 
@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$x;
 import static io.appium.java_client.AppiumBy.accessibilityId;
 import static io.appium.java_client.AppiumBy.androidUIAutomator;
 
-public class ProductPage {
+public class ProductScreen {
 
     @Step("Проверить, что страница товара с заголовком '{name}' открылась")
     public void checkProductName(String name) {
@@ -22,7 +22,7 @@ public class ProductPage {
     }
 
     @Step("Нажать на кнопку 'В корзину' на странице товара")
-    public ProductPage addToCart() {
+    public ProductScreen addToCart() {
         $x("//android.view.View[contains(@content-desc, 'В корзину')]").should(exist).click();
         return this;
     }

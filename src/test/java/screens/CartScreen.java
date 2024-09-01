@@ -1,14 +1,14 @@
-package pages;
+package screens;
 
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class CartPage {
+public class CartScreen {
 
     @Step("Открыть раздел 'Корзина'")
-    public CartPage openPage() {
+    public CartScreen open() {
         $x("//android.widget.ImageView[contains(@content-desc,'Корзина\nВкладка 3 из 5')]").click();
         return this;
     }

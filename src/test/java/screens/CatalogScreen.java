@@ -1,4 +1,4 @@
-package pages;
+package screens;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.*;
 import static io.appium.java_client.AppiumBy.accessibilityId;
 
-public class CatalogPage {
+public class CatalogScreen {
 
     @Step("Проверить, что страница называется 'Результаты поиска' и список найденных товаров не пуст")
     public void checkProductsAreFound(String text) {

@@ -14,7 +14,7 @@ import org.junit.jupiter.api.BeforeEach;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
-public class TestBase {
+public class TestBaseMobile {
 
     @BeforeAll
     static void beforeAll() {

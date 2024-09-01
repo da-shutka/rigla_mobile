@@ -1,4 +1,4 @@
-package pages;
+package screens;
 
 import io.qameta.allure.Step;
 
@@ -7,17 +7,18 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 import static io.appium.java_client.AppiumBy.accessibilityId;
 
-public class FirstWelcomePage {
+public class WelcomeScreen {
 
-    @Step("Проверить, что на первой приветственной странице есть кнопка 'Далее'")
-    public FirstWelcomePage checkNextButtonExistence() {
+    @Step("Проверить, что на приветственной странице есть кнопка 'Далее'")
+    public WelcomeScreen checkNextButtonExistence() {
         $(accessibilityId("Далее")).should(exist);
         return this;
     }
 
-    @Step("Нажать кнопку 'Далее' на первой приветственной странице")
-    public void clickNext() {
+    @Step("Нажать кнопку 'Далее' на приветственной странице")
+    public WelcomeScreen clickNext() {
         $(accessibilityId("Далее")).click();
+        return this;
     }
 
     @Step("Закрыть приветственную страницу")
